@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="orm.Contacto" table="contacto" lazy="false">
+		<id name="uid_Cont" column="uid_Cont" type="integer" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		<property name="nombre_Cont" column="nombre_Cont" type="string" length="100" not-null="true" lazy="false">
+			<meta attribute="field-description">
+				Nombre del contacto
+			</meta>
+		</property>
+		<property name="apellido_Cont" column="apellido_Cont" type="string" length="100" not-null="true" lazy="false">
+			<meta attribute="field-description">
+				Apellido del contacto
+			</meta>
+		</property>
+		<property name="mail_Cont" column="mail_Cont" type="string" length="50" not-null="true" lazy="false">
+			<meta attribute="field-description">
+				Email del contacto
+			</meta>
+		</property>
+		<property name="telefono_Cont" column="telefono_Cont" type="string" length="20" not-null="true" lazy="false">
+			<meta attribute="field-description">
+				Tel&#233;fono del contacto
+			</meta>
+		</property>
+		<property name="ciudad_Cont" column="ciudad_Cont" type="string" length="255" not-null="false" lazy="false">
+			<meta attribute="field-description">
+				ciudad del contacto
+			</meta>
+		</property>
+		<property name="organizacion_Cont" column="organizacion_Cont" type="string" length="255" not-null="false" lazy="false">
+			<meta attribute="field-description">
+				organizacion del contacto
+			</meta>
+		</property>
+		<property name="imagen_Cont" column="imagen_Cont" type="text" not-null="false" lazy="false">
+			<meta attribute="field-description">
+				imagen del contacto
+			</meta>
+		</property>
+		<set name="ORM_Membresia" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="id_Contacto" not-null="true"/>
+			<one-to-many class="orm.Membresia"/>
+		</set>
+		<set name="ORM_Actividad_leida" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="id_Contacto" not-null="true"/>
+			<one-to-many class="orm.Actividad_Leida"/>
+		</set>
+		<set name="ORM_Notificacion_leida" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="id_Contacto" not-null="true"/>
+			<one-to-many class="orm.Notificacion_Leida"/>
+		</set>
+	</class>
+</hibernate-mapping>

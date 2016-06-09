@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="orm.Notificacion_Leida" table="notificacion_Leida" lazy="false">
+		<id name="uid_NotiLe" column="uid_NotiLe" type="integer" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		<property name="fecha_NotiLe" column="fecha_NotiLe" type="string" length="100" not-null="true" lazy="false">
+			<meta attribute="field-description">
+				Fecha en que fue le&#237;da la actividad
+			</meta>
+		</property>
+		<many-to-one name="idContacto" cascade="lock" column="id_Contacto" class="orm.Contacto" not-null="true" lazy="no-proxy" access="field">
+		</many-to-one>
+		<many-to-one name="idNotificacion" cascade="lock" column="id_Notificacion" class="orm.Notificacion" not-null="true" lazy="no-proxy" access="field">
+		</many-to-one>
+	</class>
+</hibernate-mapping>
