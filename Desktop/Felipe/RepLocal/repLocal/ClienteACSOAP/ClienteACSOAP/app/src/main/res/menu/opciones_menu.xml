@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.adrian.clienteacsoap.Principal">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/action_settings"
+        tools:context="com.example.adrian.clienteacsoap.Principal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_buscarGrupos"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_search"
+        tools:context="com.example.adrian.clienteacsoap.busqueda_Grupos"
+        android:title="@string/action_buscarGrupos"
+
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_verNotificaciones"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/action_verNotificaciones"
+
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_verActividades"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/action_verActividades"
+
+        app:showAsAction="never" />
+</menu>

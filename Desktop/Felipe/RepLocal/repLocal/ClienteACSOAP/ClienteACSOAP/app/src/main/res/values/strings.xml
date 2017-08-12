@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ClienteACSOAP</string>
+    <string name="action_settings">Búsqueda Simple</string>
+    <string name="action_buscarGrupos">Buscar Grupos</string>
+    <string name="action_verNotificaciones">Ver Notificaciones</string>
+    <string name="action_verActividades">Ver Actividades</string>
+    <string name="ayuda">Ingrese id Contacto</string>
+    <string name="ayuda2">Ingrese id Grupo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_busqueda__grupos">busqueda_Grupos</string>
+    <string name="title_activity_ver__notificacion">ver_Notificacion</string>
+    <string name="title_activity_ver__actividad">ver_Actividad</string>
+</resources>
